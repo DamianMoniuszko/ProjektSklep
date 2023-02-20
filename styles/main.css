@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #20211e;
+}
+
+.inner--default, .hero .hero__container, header .header__container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  padding: 2rem 0;
+  background-color: black;
+  z-index: 1;
+}
+header .header__container {
+  display: flex;
+  justify-content: space-between;
+}
+header h4 {
+  color: #C0FF00;
+  font-size: 20px;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  cursor: pointer;
+  margin-left: 1rem;
+  border-bottom: 0.063rem solid transparent;
+  padding-bottom: 0.5rem;
+}
+header ul li:hover {
+  border-bottom: 0.063rem solid;
+  border-image-source: linear-gradient(to right, #C0FF00, #008000);
+  border-image-slice: 1;
+}
+
+.hero {
+  background-image: url("nike.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 10rem;
+  border: 0.063rem solid black;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.hero .hero__container h1 {
+  color: white;
+  margin-bottom: 3rem;
+}
+.hero .hero__container a {
+  color: black;
+  background-color: white;
+}
+
+footer {
+  background-color: black;
+  padding: 7px;
+}
+footer li {
+  color: #C0FF00;
+}/*# sourceMappingURL=main.css.map */

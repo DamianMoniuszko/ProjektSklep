@@ -1,0 +1,100 @@
+@import "variables";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $lato;
+    text-decoration: none;
+    list-style-type: none;
+    color: $white;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $darkGrey ;
+}
+
+.inner--default {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: $black;
+    z-index: 1;
+    .header__container {
+        @extend .inner--default;
+        display: flex;
+        justify-content: space-between;
+    }
+    h4 {
+        color: $lime;
+        font-size: 20px;
+    }
+    ul {
+        display: flex;
+        li {
+            cursor: pointer;
+            margin-left: 1rem;
+            border-bottom: 0.063rem solid transparent;
+            padding-bottom: 0.5rem;
+
+            &:hover {
+                border-bottom: 0.063rem solid;
+                border-image-source: linear-gradient(to right, $lime, $green);
+                border-image-slice: 1;
+            }
+        }
+    }
+}
+
+.hero{
+    background-image: url("nike.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .hero__container{
+        @extend .inner--default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 10rem;
+        border: 0.063rem solid $black;
+        backdrop-filter: blur(5px);
+        h1{
+            color: $white;
+            margin-bottom: 3rem;
+        }
+        // p{
+        //     margin-bottom: 3rem;
+        //     color: $black;
+        // }
+        button{
+            // @include button($darkGrey, $black);
+        }
+        a{
+            color: $black;
+            background-color: $white;
+        }
+    }
+}
+footer{
+        background-color: $black;
+        padding:7px;
+        li{
+            color: $lime;
+        }
+}
+
+
