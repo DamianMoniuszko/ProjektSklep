@@ -1,6 +1,7 @@
 <?php
 require_once"systemClass.php";
 require_once"layoutClass.php";
+session_start();
 ?>
 
 <!DOCTYPE html>

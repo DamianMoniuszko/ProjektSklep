@@ -12,5 +12,19 @@ class SystemClass {
         </head>
         ";
     }
+
+    static function dbConnect(){
+        require_once "config.php";
+        return new mysqli($host, $db_user, $db_password, $db_name);
+    }
+
+    public function blockEntrace(){
+        if(isset($_SESSION["signedIn"])==false){
+            header("location: index.php");
+        }
+        else{
+            header("location: shop.php");
+        }
+    }
 }
 ?>

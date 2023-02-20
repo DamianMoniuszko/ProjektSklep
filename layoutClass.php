@@ -3,16 +3,16 @@
 class LayoutClass {
     static function printHeader() {
         $conditionReander = "";
-        if(isset($_SESSION['signedIn']) && $_SESSION['signedIn'] == true) {
+        if(isset($_SESSION['signedIn']) && $_SESSION['signedIn'] === true) {
             $conditionReander = "
                 <li>
-                    <a href='logout.php'>wyloguj</a>
+                    <a href='logout.php'>Wyloguj</a>
                 </li>
             ";
         } else {
             $conditionReander = "
                 <li><a href=signInPage.php>Zaloguj się</a></li>
-                <li><a href=signUnPage.php>Zarejestruj się</a></li>
+                <li><a href=signUpPage.php>Zarejestruj się</a></li>
             ";
         }
 
@@ -25,6 +25,7 @@ class LayoutClass {
                     <li><a>Home</a></li>
                     <li><a>About Us</a></li>
                     <li><a>Contact</a></li>
+                    $conditionReander
                 </ul>
             </nav>
         </div>
